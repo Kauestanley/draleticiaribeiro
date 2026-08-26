@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Leticia Ribeiro — Clínica de Estética</title>
+<meta name="description" content="Estética avançada, atendimento personalizado e protocolos pensados para você. Clínica Leticia Ribeiro — Abaetetuba e Igarapé-Miri." />
+<meta name="theme-color" content="#3F1F29" />
+<meta property="og:title" content="Leticia Ribeiro — Clínica de Estética" />
+<meta property="og:description" content="Seu cuidado começa aqui. Estética avançada e atendimento personalizado." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%8D%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   LETICIA RIBEIRO — CLÍNICA DE ESTÉTICA
+   Refinamento visual v2 — Montserrat, editorial, fotografia integrada.
+   Estrutura/lógica/preços preservados.
+   ============================================================ */
+
+:root{
+  /* ---- paleta (rosé sofisticado, nada saturado) ---- */
+  --bg:#FAF6F2;          /* branco quente */
+  --paper:#FFFFFF;
+  --cream:#F2EBE4;       /* off-white nude */
+  --rose-1:#F4E9E9;      /* rosa muito claro */
+  --rose-2:#E4D0D0;      /* nude rosé */
+  --rose-3:#CBA6AB;      /* rosé */
+  --burned:#A5646E;      /* rosa queimado */
+  --wine:#7C3F4E;        /* vinho/rosa profundo */
+  --wine-2:#5E2C39;      /* vinho escuro */
+  --wine-3:#3F1F29;      /* quase preto vinho */
+  --ink:#2A2320;         /* texto principal (preto quente) */
+  --muted:#8C7E7B;       /* secundário */
+  --faint:#B6A9A4;       /* terciário */
+  --line:#ECE2DA;        /* hairline */
+  --line-2:#E2D5CC;
+  --rosegold:#C6A98F;    /* metálico sutil */
+
+  --sans:'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --r-card:22px;
+  --r-media:20px;
+  --r-ctrl:16px;
+  --pad:22px;
+  --maxw:520px;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --shadow-soft:0 24px 60px -38px rgba(94,44,57,.45);
+  --shadow-card:0 20px 44px -34px rgba(94,44,57,.4);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.66;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  font-variant-numeric:tabular-nums;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--rose-2);color:var(--wine-2)}
+
+#stage{
+  max-width:var(--maxw);margin:0 auto;position:relative;
+  min-height:100vh;min-height:100dvh;background:var(--bg);
+  box-shadow:0 0 90px -30px rgba(63,31,41,.28);
+}
+#app{padding-bottom:132px}
+
+/* ---------- tipografia base ---------- */
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.01em;line-height:1.08}
+.eyebrow{
+  font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--burned);
+}
+.lede{color:var(--muted);font-size:15.5px;font-weight:400;line-height:1.55}
+
+/* ---------- helpers ---------- */
+.wrap{padding:0 var(--pad)}
+.hairline{height:1px;background:var(--line);border:0}
+.center{text-align:center}
+
+/* ---------- transição de página ---------- */
+@keyframes pageIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+#app.page-in{animation:pageIn .34s var(--ease)}
+@media (prefers-reduced-motion:reduce){#app.page-in{animation:none}}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none!important}
+  *{scroll-behavior:auto!important}
+}
+
+/* ============================================================
+   PREÇO — regra única, R$ e valor no mesmo grupo tipográfico
+   ============================================================ */
+.money{
+  display:inline-flex;align-items:baseline;gap:.16em;
+  font-variant-numeric:tabular-nums;white-space:nowrap;
+  font-weight:600;color:var(--wine);letter-spacing:-.01em;line-height:1;
+}
+.money .cur{font-size:.8em;font-weight:600;letter-spacing:.01em;}
+.money .val{font-size:1em;}
+.money-plain{
+  font-weight:600;color:var(--wine);font-variant-numeric:tabular-nums;
+  white-space:nowrap;letter-spacing:-.005em;line-height:1;
+}
+
+/* ============================================================
+   BOTÕES
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;
+  min-height:56px;padding:0 24px;border-radius:var(--r-ctrl);
+  font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  transition:transform .28s var(--ease),box-shadow .28s var(--ease),background .28s var(--ease),border-color .28s var(--ease);
+}
+.btn:active{transform:scale(.972)}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-primary{background:var(--wine);color:#fff;box-shadow:0 16px 34px -18px rgba(124,63,78,.85)}
+.btn-primary:hover{background:var(--wine-2)}
+.btn-ghost{background:transparent;color:var(--wine);border:1px solid var(--line-2)}
+.btn-ghost:hover{border-color:var(--rose-3);background:var(--rose-1)}
+.btn-ghost .wa-ico{color:#1FA855}
+.btn-light{background:#fff;color:var(--wine);box-shadow:var(--shadow-card)}
+.btn-ondark{background:#fff;color:var(--wine-2)}
+.btn-ondark:hover{background:var(--rose-1)}
+.btn-row{display:flex;flex-direction:column;gap:12px}
+
+/* ============================================================
+   MÍDIA (fallback gradiente + foto real por cima)
+   ============================================================ */
+.media{position:relative;overflow:hidden;background:var(--rose-2)}
+.media-ic{position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.9)}
+.media-ic svg{width:15%;height:auto;max-width:64px;opacity:.92}
+.media-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  animation:imgIn .9s var(--ease) both}
+@keyframes imgIn{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:none}}
+.media-scrim{position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(63,31,41,.62),rgba(63,31,41,.12) 52%,rgba(63,31,41,0) 78%)}
+
+/* gradientes-fallback (família rosé-vinho, coesa e sóbria) */
+.grad-hero{background:linear-gradient(180deg,#c9a6d9 0%,#a37fb4 30%,#6b4c78 58%,#241826 100%)}
+.grad-city-abaetetuba{background:linear-gradient(158deg,#a5646e,#5e2c39)}
+.grad-city-igarape-miri{background:linear-gradient(158deg,#b98a94,#7c3f4e)}
+.grad-protocolos-corporais{background:linear-gradient(155deg,#bb919a,#7c3f4e)}
+.grad-tratamentos-faciais{background:linear-gradient(155deg,#e0c7c8,#b1808a)}
+.grad-harmonizacao-facial{background:linear-gradient(155deg,#a5646e,#5e2c39)}
+.grad-bioestimulacao-rejuvenescimento{background:linear-gradient(155deg,#c0a4a8,#6e4753)}
+.grad-gluteos{background:linear-gradient(155deg,#bb8f99,#7a3e52)}
+.grad-protocolos-especiais{background:linear-gradient(155deg,#8c5560,#452530)}
+
+/* ============================================================
+   HERO / CAPA — design roxo-magenta (CAPA_HEAD)
+   ============================================================ */
+.hero{position:relative;min-height:100dvh;display:flex;flex-direction:column;overflow:hidden;color:#fff}
+.hero .media{position:absolute;inset:0}
+.hero .media-scrim{background:linear-gradient(to top,rgba(22,13,26,.94) 0%,rgba(22,13,26,.52) 30%,rgba(22,13,26,.06) 54%,rgba(22,13,26,.14) 78%,rgba(40,22,48,.4) 100%)}
+.hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;flex:1;
+  padding:calc(16px + env(safe-area-inset-top)) var(--pad) calc(42px + env(safe-area-inset-bottom))}
+
+/* menu (pill) */
+.hero-nav{display:flex;justify-content:center}
+.hero-nav-pill{display:flex;gap:20px;align-items:center;max-width:100%;overflow-x:auto;white-space:nowrap;
+  border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:13px 20px;
+  background:rgba(26,15,30,.28);
+  -webkit-backdrop-filter:blur(8px) saturate(120%);backdrop-filter:blur(8px) saturate(120%)}
+.hero-nav-pill a{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#fff;flex:none;
+  transition:color .2s var(--ease)}
+.hero-nav-pill a:hover{color:#ff8fbf}
+
+/* conteúdo da capa (base) */
+.capa{margin-top:auto}
+.capa-title{font-family:'Anton',var(--sans);font-weight:400;text-transform:uppercase;line-height:.92;
+  font-size:clamp(36px,10.8vw,60px);letter-spacing:-.01em;white-space:nowrap;transform:skewX(-6deg);transform-origin:left bottom;
+  color:#fff;text-shadow:0 10px 34px rgba(0,0,0,.4)}
+.capa-title .neon{display:inline-block;
+  background:linear-gradient(180deg,#ff77af 0%,#e0459f 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.capa-line{display:block;height:2px;width:min(80%,340px);background:rgba(255,255,255,.9);
+  margin:24px 0;transform:skewX(-6deg);transform-origin:left}
+.capa-btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 44px;
+  border:1.5px solid rgba(255,255,255,.9);border-radius:999px;color:#fff;
+  font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  transition:background .26s var(--ease),color .26s var(--ease),transform .26s var(--ease)}
+.capa-btn:hover{background:#fff;color:#3a2340}
+.capa-btn:active{transform:scale(.96)}
+
+/* ============================================================
+   TOPBAR (telas internas, claras)
+   ============================================================ */
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:14px;
+  padding:calc(12px + env(safe-area-inset-top)) var(--pad) 12px;
+  background:color-mix(in srgb,var(--bg) 86%,transparent);
+  backdrop-filter:blur(16px) saturate(120%);-webkit-backdrop-filter:blur(16px) saturate(120%);
+  border-bottom:1px solid var(--line)}
+.back{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex:none;
+  border:1px solid var(--line-2);background:var(--paper);color:var(--wine);
+  transition:background .2s var(--ease),transform .2s var(--ease)}
+.back:active{transform:scale(.93)}
+.back:hover{background:var(--rose-1)}
+.back svg{width:19px;height:19px}
+.topbar-title{flex:1;min-width:0;font-size:13px;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.city-chip{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--burned);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;white-space:nowrap}
+
+/* ============================================================
+   SELEÇÃO DE CIDADE
+   ============================================================ */
+.city-screen{min-height:100dvh;display:flex;flex-direction:column;justify-content:center;
+  padding:56px var(--pad) 48px}
+.city-screen .head{margin-bottom:34px}
+.city-screen .eyebrow{display:block;margin-bottom:18px}
+.city-screen h2{font-size:clamp(30px,8.6vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.04}
+.city-screen .lede{margin-top:16px;max-width:30ch}
+.city-cards{display:flex;flex-direction:column;gap:18px}
+.city-card{position:relative;display:block;text-align:left;border-radius:var(--r-card);overflow:hidden;
+  min-height:216px;color:#fff;box-shadow:var(--shadow-card);
+  transition:transform .34s var(--ease),box-shadow .34s var(--ease)}
+.city-card:active{transform:scale(.984)}
+.city-card:hover{box-shadow:var(--shadow-soft)}
+.city-card .media{position:absolute;inset:0}
+.city-card .cc-body{position:relative;z-index:2;height:100%;min-height:216px;
+  display:flex;flex-direction:column;justify-content:flex-end;padding:24px}
+.city-card .cc-eyebrow{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.82)}
+.city-card h3{font-size:clamp(28px,8vw,34px);font-weight:700;letter-spacing:-.02em;color:#fff;margin:8px 0 6px}
+.city-card p{font-size:13px;font-weight:400;color:rgba(255,255,255,.86);max-width:26ch;line-height:1.5}
+.city-card .cc-go{position:absolute;top:22px;right:22px;z-index:3;width:40px;height:40px;border-radius:50%;
+  display:grid;place-items:center;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);color:#fff;
+  backdrop-filter:blur(4px)}
+.city-card .cc-go svg{width:20px;height:20px}
+
+/* ============================================================
+   HOME DA CIDADE
+   ============================================================ */
+.home-hero{padding:52px var(--pad) 6px}
+.home-hero .welcome{font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--burned)}
+.home-hero h2{font-size:clamp(34px,10vw,46px);font-weight:700;letter-spacing:-.035em;line-height:1;margin-top:14px}
+.home-hero .loc{display:inline-flex;align-items:center;gap:8px;margin-top:20px;
+  font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--wine)}
+.home-hero .loc svg{width:15px;height:15px}
+.home-hero .continua{margin-top:20px;color:var(--muted);font-size:15.5px;max-width:36ch;line-height:1.6}
+.home-mini{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:34px var(--pad) 0}
+.mini{border:1px solid var(--line);border-radius:var(--r-ctrl);padding:20px 18px;background:var(--paper)}
+.mini .n{font-size:32px;font-weight:700;color:var(--wine);line-height:1;letter-spacing:-.02em}
+.mini .l{font-size:11.5px;font-weight:500;color:var(--muted);margin-top:8px;line-height:1.35}
+.home-cta{padding:32px var(--pad) 6px}
+
+/* ============================================================
+   CATEGORIAS (índice editorial)
+   ============================================================ */
+.screen-head{padding:44px var(--pad) 10px}
+.screen-head .eyebrow{display:block;margin-bottom:16px}
+.screen-head h2{font-size:clamp(32px,9vw,44px);font-weight:700;letter-spacing:-.035em;line-height:1.02}
+.screen-head .lede{margin-top:16px;max-width:32ch}
+
+.cat-list{padding:14px var(--pad) 0;display:flex;flex-direction:column;gap:30px}
+.cat-card{position:relative;display:block;border-radius:var(--r-card);overflow:hidden;background:var(--paper);
+  box-shadow:var(--shadow-card);transition:transform .34s var(--ease),box-shadow .34s var(--ease)}
+.cat-card:active{transform:scale(.988)}
+.cat-card:hover{box-shadow:var(--shadow-soft)}
+.cat-card .media{height:200px}
+.cat-card .cat-index{position:absolute;top:14px;left:20px;z-index:3;
+  font-size:clamp(58px,17vw,84px);font-weight:300;line-height:.8;letter-spacing:-.03em;
+  color:rgba(255,255,255,.9);text-shadow:0 6px 24px rgba(63,31,41,.35)}
+.cat-body{padding:22px 22px 24px}
+.cat-body h3{font-size:clamp(23px,6.6vw,28px);font-weight:600;letter-spacing:-.02em}
+.cat-body p{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.5;max-width:34ch}
+.cat-body .go{display:inline-flex;align-items:center;gap:9px;margin-top:18px;
+  font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--wine)}
+.cat-body .go svg{width:15px;height:15px}
+
+/* ============================================================
+   PÁGINA DE CATEGORIA — divisória editorial + procedimentos
+   ============================================================ */
+.cat-hero{padding:40px var(--pad) 6px}
+.cat-hero .num{font-size:clamp(64px,24vw,120px);font-weight:300;line-height:.82;letter-spacing:-.04em;color:var(--rose-3)}
+.cat-hero .num-line{height:1px;background:var(--line-2);margin:20px 0 22px;width:100%}
+.cat-hero .eyebrow{display:block;margin-bottom:14px}
+.cat-hero h2{font-size:clamp(32px,9.4vw,46px);font-weight:700;letter-spacing:-.035em;line-height:1.0}
+.cat-hero .lede{margin-top:16px;max-width:34ch}
+
+.proc-list{padding:26px var(--pad) 0;display:flex;flex-direction:column;gap:26px}
+.card{display:block;border-radius:var(--r-card);overflow:hidden;background:var(--paper);
+  box-shadow:var(--shadow-card);transition:transform .34s var(--ease),box-shadow .34s var(--ease)}
+.card:active{transform:scale(.99)}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-soft)}
+.card .media{height:196px}
+.card .badge-eval{position:absolute;top:14px;left:14px;z-index:3;display:inline-flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,.94);color:var(--wine-2);font-size:10px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;padding:7px 11px;border-radius:999px;backdrop-filter:blur(4px)}
+.card .badge-eval .dot{width:5px;height:5px;border-radius:50%;background:var(--burned)}
+.card-body{padding:20px 22px 22px}
+.card-body h3{font-size:clamp(19px,5.4vw,22px);font-weight:600;letter-spacing:-.015em;line-height:1.12}
+.card-body p{font-size:13.5px;font-weight:400;color:var(--muted);margin-top:8px;line-height:1.5;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card-foot{display:flex;align-items:flex-end;justify-content:space-between;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.price-tag{display:flex;flex-direction:column;gap:3px}
+.price-tag .from{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.price-tag .money,.price-tag .money-plain{font-size:clamp(18px,5vw,20px)}
+.price-eval{font-size:13.5px;font-weight:600;color:var(--burned);letter-spacing:.01em}
+.arrow{width:38px;height:38px;border-radius:50%;flex:none;display:grid;place-items:center;
+  border:1px solid var(--line-2);color:var(--wine);transition:background .24s var(--ease),color .24s var(--ease)}
+.arrow svg{width:16px;height:16px}
+.card:hover .arrow{background:var(--wine);color:#fff;border-color:var(--wine)}
+
+/* ============================================================
+   DETALHE — página editorial do procedimento
+   ============================================================ */
+.detail-top{padding:34px var(--pad) 0}
+.detail-top h2{font-size:clamp(32px,9.2vw,44px);font-weight:700;letter-spacing:-.035em;line-height:1.02}
+.detail-impact{margin-top:14px;font-size:clamp(16.5px,4.6vw,19px);font-weight:500;color:var(--burned);line-height:1.4;max-width:30ch}
+.detail-eval{display:inline-flex;align-items:center;gap:9px;margin-top:20px;background:var(--rose-1);
+  color:var(--wine-2);font-size:12px;font-weight:600;letter-spacing:.02em;padding:9px 15px;border-radius:999px;border:1px solid var(--rose-2)}
+.detail-eval .dot{width:6px;height:6px;border-radius:50%;background:var(--burned)}
+.detail-photo{margin:28px var(--pad) 0;border-radius:var(--r-media);overflow:hidden;height:clamp(300px,84vw,380px);box-shadow:var(--shadow-card)}
+.detail-photo .media{position:absolute;inset:0}
+.detail-photo{position:relative}
+
+.blocks{padding:12px var(--pad) 0}
+.block{padding:26px 0;border-top:1px solid var(--line)}
+.block:first-child{border-top:0}
+.block h4{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--burned)}
+.block p{margin-top:12px;font-size:16px;font-weight:400;color:var(--ink);line-height:1.68}
+.included{list-style:none;padding:8px 0 0;display:flex;flex-direction:column;gap:14px}
+.included li{display:flex;align-items:flex-start;gap:13px;font-size:15.5px;font-weight:400}
+.included .ck{flex:none;width:24px;height:24px;border-radius:50%;background:var(--rose-1);display:grid;place-items:center;color:var(--wine);margin-top:1px}
+.included .ck svg{width:13px;height:13px}
+
+.invest{padding:30px var(--pad) 0}
+.invest .eyebrow{display:block;margin-bottom:16px}
+.invest-price{line-height:1}
+.invest-price .money{font-size:clamp(34px,10vw,44px)}
+.invest-price .money-plain{font-size:clamp(28px,8vw,38px)}
+.invest-eval{font-size:clamp(24px,6.5vw,30px);font-weight:600;color:var(--wine);letter-spacing:-.02em}
+.invest-sub{margin-top:12px;font-size:13.5px;color:var(--muted);line-height:1.5;max-width:34ch}
+.price-options{display:flex;flex-direction:column;gap:12px}
+.price-opt{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;
+  border:1px solid var(--line-2);border-radius:var(--r-ctrl);background:var(--paper)}
+.price-opt .lbl{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.price-opt .money{font-size:clamp(22px,6vw,26px)}
+
+.detail-cta{padding:34px var(--pad) 0}
+.back-link{display:inline-flex;align-items:center;gap:10px;padding:26px var(--pad) 6px;
+  font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.back-link:hover{color:var(--wine)}
+.back-link svg{width:16px;height:16px}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.foot{margin-top:56px;background:var(--wine-3);color:#fff;padding:56px var(--pad) 48px;text-align:center}
+.foot .fmono{font-size:clamp(26px,7.5vw,32px);font-weight:700;letter-spacing:-.02em;color:#fff}
+.foot .ftype{font-size:10.5px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:10px}
+.foot .city-line{display:inline-flex;align-items:center;gap:8px;margin-top:18px;
+  font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-3)}
+.foot .city-line svg{width:14px;height:14px}
+.foot .fquote{font-size:clamp(19px,5.4vw,22px);font-weight:300;color:rgba(255,255,255,.94);margin:30px auto;max-width:24ch;line-height:1.4}
+.foot .flinks{display:flex;flex-direction:column;gap:12px;max-width:340px;margin:0 auto}
+.foot .fmeta{margin-top:34px;font-size:11.5px;font-weight:400;color:rgba(255,255,255,.5);line-height:1.7}
+.foot .fmeta a{color:rgba(255,255,255,.82);text-decoration:underline;text-underline-offset:3px}
+.foot .btn-ghost{color:#fff;border-color:rgba(255,255,255,.28)}
+.foot .btn-ghost:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.06)}
+.foot .btn-ghost .wa-ico{color:#4ee38a}
+
+/* ============================================================
+   WHATSAPP FLUTUANTE
+   ============================================================ */
+.fab{position:fixed;z-index:60;right:max(18px,calc((100vw - var(--maxw))/2 + 18px));
+  bottom:calc(22px + env(safe-area-inset-bottom));width:58px;height:58px;border-radius:50%;
+  background:#25D366;color:#fff;display:grid;place-items:center;
+  box-shadow:0 16px 32px -12px rgba(37,211,102,.55);transition:transform .26s var(--ease),opacity .26s var(--ease)}
+.fab:hover{transform:scale(1.07)}
+.fab:active{transform:scale(.93)}
+.fab svg{width:28px;height:28px}
+.fab.hide{opacity:0;pointer-events:none;transform:scale(.5)}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.no-scrollbar::-webkit-scrollbar{display:none}
+.no-scrollbar{scrollbar-width:none;-ms-overflow-style:none}
+.faq-list{padding:22px var(--pad) 0;display:flex;flex-direction:column;gap:14px}
+.faq-item{border:1px solid var(--line-2);border-radius:var(--r-ctrl);background:var(--paper);overflow:hidden}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:20px;font-size:15px;font-weight:600;color:var(--ink)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item .plus{flex:none;width:22px;height:22px;color:var(--wine);transition:transform .3s var(--ease)}
+.faq-item .plus svg{width:22px;height:22px}
+.faq-item[open] .plus{transform:rotate(45deg)}
+.faq-item .faq-a{padding:0 20px 20px;font-size:14.5px;font-weight:400;color:var(--muted);line-height:1.62}
+
+/* ---------- desktop: moldura de app ---------- */
+@media (min-width:560px){
+  :root{--pad:30px}
+  #stage{margin:26px auto;min-height:calc(100dvh - 52px);border-radius:30px;overflow:hidden}
+  .hero{min-height:calc(100dvh - 52px)}
+}
+</style>
+</head>
+<body>
+<div id="stage">
+  <main id="app" aria-live="polite"></main>
+</div>
+
+<a id="fab" class="fab" href="#" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.53.07-.8.38-.27.3-1.05 1.02-1.05 2.49s1.08 2.89 1.23 3.09c.15.2 2.12 3.24 5.13 4.54.72.31 1.27.5 1.71.64.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12.02 2C6.5 2 2.02 6.48 2.02 12c0 1.76.46 3.42 1.27 4.86L2 22l5.28-1.38c1.39.76 2.98 1.19 4.68 1.19h.01c5.52 0 10-4.48 10-10S17.54 2 12.02 2z"/></svg>
+</a>
+
+<script>
+/* ============================================================
+   0. CONFIG — troque aqui quando tiver os dados reais
+   ============================================================ */
+// WhatsApp (formato internacional, só dígitos). +55 91 99145-4090
+const WA = { 'abaetetuba':'5591991454090', 'igarape-miri':'5591991454090' };
+// WhatsApp geral (quando nenhuma cidade foi escolhida ainda)
+const WA_DEFAULT = '5591991454090';
+const INSTAGRAM = 'https://www.instagram.com/leticiaribeiro_clinicaestetica/';
+const CITY_LABEL = { 'abaetetuba':'Abaetetuba', 'igarape-miri':'Igarapé-Miri' };
+
+/* ------------------------------------------------------------
+   IMAGENS — é só soltar os arquivos em /images com estes nomes.
+   Enquanto o arquivo não existir, aparece o gradiente-fallback.
+   Formatos recomendados: .webp ou .jpg, orientação retrato/paisagem
+   conforme o slot (ver images/LEIA-ME.txt).
+   ------------------------------------------------------------ */
+const IMG_BASE = 'images/';
+const IMG = {
+  hero: IMG_BASE+'hero.jpg',
+  city: {
+    'abaetetuba':   IMG_BASE+'cidade-abaetetuba.jpg',
+    'igarape-miri': IMG_BASE+'cidade-igarape-miri.jpg'
+  },
+  category: {},   // preenchido abaixo a partir das categorias
+  procedure: {}   // preenchido abaixo a partir dos procedimentos
+};
+// Ajuste fino de enquadramento por procedimento (object-position da foto)
+const IMG_POS = { 'rinomodelacao':'50% 74%' };
+
+/* ============================================================
+   1. ÍCONES
+   ============================================================ */
+const ICON = {
+  arrowL:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>',
+  arrowR:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>',
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>',
+  pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0116 0z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+  plus:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>',
+  face:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4.4 0-7 3.4-7 8 0 5 3.2 10 7 10s7-5 7-10c0-4.6-2.6-8-7-8z"/><path d="M9 11h.01M15 11h.01"/><path d="M9.5 15c.8.7 1.6 1 2.5 1s1.7-.3 2.5-1"/></svg>',
+  droplet:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.3 6 10.5A6 6 0 016 13.5C6 9.3 12 3 12 3z"/><path d="M10 14a2 2 0 002 2"/></svg>',
+  sparkle:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/><path d="M19 15l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7.7-2z"/></svg>',
+  sun:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"/></svg>',
+  lips:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12s3-3 5-3 3 1.5 4 1.5S18 9 19 9s2 3 2 3-4 4-9 4-9-4-9-4z"/><path d="M3 12h18"/></svg>',
+  eye:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>',
+  leaf:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20C3 12 8 4 20 4c0 12-8 17-16 16z"/><path d="M9 15c3-3 5-4 8-5"/></svg>',
+  hex:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8.5 5v10L12 22l-8.5-5V7L12 2z"/><path d="M12 8v8M8.5 10v4M15.5 10v4"/></svg>',
+  flame:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4 0 7-2.8 7-7 0-4-3-6-3-9-2 1-3 2.5-3 4.5C11 8 9 6 9 4 7 6 5 8 5 12c0 5.5 3.5 10 7 10z"/></svg>',
+  wave:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>',
+  heart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-9-9c-1.3-3 .5-6 3.5-6 2 0 3.5 1.5 5.5 4 2-2.5 3.5-4 5.5-4 3 0 4.8 3 3.5 6-2 4.5-9 9-9 9z"/></svg>',
+  star:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.7 6.2.7-4.6 4.2 1.2 6.1L12 16.9 6.6 19.7l1.2-6.1L3.2 9.4l6.2-.7L12 3z"/></svg>',
+  scan:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V6a2 2 0 012-2h2M16 4h2a2 2 0 012 2v2M20 16v2a2 2 0 01-2 2h-2M8 20H6a2 2 0 01-2-2v-2"/><path d="M4 12h16"/></svg>',
+  body:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"/><path d="M12 8v7M8 11l4-1 4 1M9 21l3-6 3 6"/></svg>',
+  wa:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.53.07-.8.38-.27.3-1.05 1.02-1.05 2.49s1.08 2.89 1.23 3.09c.15.2 2.12 3.24 5.13 4.54.72.31 1.27.5 1.71.64.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12.02 2C6.5 2 2.02 6.48 2.02 12c0 1.76.46 3.42 1.27 4.86L2 22l5.28-1.38c1.39.76 2.98 1.19 4.68 1.19h.01c5.52 0 10-4.48 10-10S17.54 2 12.02 2z"/></svg>'
+};
+
+/* ============================================================
+   2. CATEGORIAS
+   ============================================================ */
+const CATEGORIES = [
+  {slug:'protocolos-corporais', name:'Protocolos Corporais', tagline:'Contorno, tônus e bem-estar do corpo.', icon:'body'},
+  {slug:'tratamentos-faciais', name:'Tratamentos Faciais', tagline:'Cuidado, textura e luminosidade para a sua pele.', icon:'sparkle'},
+  {slug:'harmonizacao-facial', name:'Harmonização Facial', tagline:'Proporção e equilíbrio para o seu rosto.', icon:'face'},
+  {slug:'bioestimulacao-rejuvenescimento', name:'Bioestimulação e Rejuvenescimento', tagline:'Colágeno, firmeza e juventude da pele.', icon:'hex'},
+  {slug:'gluteos', name:'Glúteos', tagline:'Firmeza, tônus e contorno.', icon:'heart'},
+  {slug:'protocolos-especiais', name:'Protocolos Especiais', tagline:'Jornadas completas, pensadas para você.', icon:'star'}
+];
+CATEGORIES.forEach(c=>{ IMG.category[c.slug] = IMG_BASE+'categoria-'+c.slug+'.jpg'; });
+
+/* ============================================================
+   3. COPY (compartilhada entre cidades) — nunca preço aqui
+   ============================================================ */
+const COPY = {
+  'enzima-localizada':{icon:'flame', name:'Enzima localizada 10ML',
+    blurb:'Gordura localizada tratada ponto a ponto, com resultado progressivo.',
+    what:'Aplicação de enzimas diretamente na gordura localizada. Elas ajudam a quebrar as células de gordura, que são eliminadas naturalmente pelo organismo.',
+    forWhat:'Reduzir medidas e afinar regiões específicas, como abdômen, flancos e culote.',
+    how:'Feito em sessões espaçadas; a quantidade é definida na avaliação, conforme a área e a resposta do seu corpo.'},
+  'enzima-perda-peso':{icon:'flame', name:'Enzima perda de peso geral 10ML',
+    blurb:'Um empurrão a mais no seu processo de emagrecimento.',
+    what:'Protocolo de enzimas voltado ao estímulo do metabolismo e à redução de gordura de forma mais geral, não apenas em um ponto.',
+    forWhat:'Apoiar quem já está no processo de emagrecimento e quer potencializar os resultados com acompanhamento.',
+    how:'Aplicações em série, sempre a partir de uma avaliação que considera o seu objetivo e o seu histórico.'},
+  'estrias':{icon:'wave', name:'Protocolo para estrias',
+    blurb:'Um protocolo desenhado a partir das suas estrias.',
+    what:'Tratamento que combina técnicas de indução de colágeno para atenuar estrias, melhorando a cor, a textura e a profundidade das marcas.',
+    forWhat:'Suavizar a aparência das estrias, tanto as recentes (avermelhadas) quanto as antigas (esbranquiçadas).',
+    how:'O protocolo e o número de sessões são definidos na avaliação, porque cada estria responde de um jeito.'},
+  'peim':{icon:'droplet', name:'PEIM — Microvasos',
+    blurb:'Adeus aos vasinhos, com técnica e precisão.',
+    what:'O PEIM é a aplicação de uma medicação diretamente nos microvasos das pernas, que faz o vaso desaparecer aos poucos.',
+    forWhat:'Reduzir os vasinhos finos e avermelhados e deixar as pernas mais uniformes.',
+    how:'Sessão em consultório; alguns casos pedem mais de uma aplicação, o que é avaliado ao longo do tratamento.'},
+  'melasma':{icon:'sun', name:'Protocolo para melasma',
+    blurb:'Manchas mais claras, pele mais uniforme e iluminada.',
+    what:'Protocolo em série que combina ativos clareadores e cuidados específicos para tratar o melasma, aquela mancha acastanhada no rosto.',
+    forWhat:'Clarear as manchas e uniformizar o tom da pele, com acompanhamento para manter o resultado.',
+    how:'São 8 sessões, com orientação de cuidados e proteção solar entre elas — parte essencial do resultado.'},
+  'lipo-papada':{icon:'face', name:'Lipo de papada enzimática',
+    blurb:'Um queixo mais definido, sem cirurgia.',
+    what:'Combinação de lipo enzimática, que reduz a gordura da papada, com drenagem linfática e radiofrequência, que ajuda a firmar a pele da região.',
+    forWhat:'Reduzir a gordura embaixo do queixo e definir o contorno do rosto e do pescoço.',
+    how:'As três técnicas são feitas na mesma sessão, se complementando para um resultado mais harmônico.'},
+  'terapia-capilar':{icon:'leaf', name:'Terapia capilar + eletroterapia',
+    blurb:'Um couro cabeludo saudável é a base de um cabelo forte.',
+    what:'Terapia capilar associada à eletroterapia, que estimula a circulação e a saúde do couro cabeludo e dos folículos.',
+    forWhat:'Fortalecer os fios, reduzir a queda e melhorar a saúde do couro cabeludo.',
+    how:'Protocolo de 6 sessões, iniciado com uma avaliação do couro cabeludo para direcionar o tratamento.'},
+  'body-piercing':{icon:'sparkle', name:'Body piercing',
+    blurb:'Aplicação segura, com material e higiene profissionais.',
+    what:'Colocação de piercing corporal em ambiente higienizado, com material esterilizado e acessório de qualidade.',
+    forWhat:'Fazer a sua aplicação com segurança, cuidado e orientação de cicatrização.',
+    how:'O valor varia conforme a região e o acessório escolhido, definidos no atendimento.'},
+
+  'skin-booster':{icon:'droplet', name:'Skin Booster facial',
+    blurb:'Hidratação profunda que devolve viço já na primeira sessão.',
+    what:'Microinjeções de ácido hialurônico e ativos que hidratam a pele por dentro e estimulam a produção de colágeno.',
+    forWhat:'Melhorar viço, textura e firmeza, com aquele aspecto de pele descansada e iluminada.',
+    how:'Pode ser feito em sessão única ou em protocolo de 3 sessões, que prolonga e potencializa o resultado.'},
+  'limpeza-pele':{icon:'sparkle', name:'Limpeza de pele',
+    blurb:'Toda pele saudável começa com uma boa limpeza.',
+    what:'Limpeza profunda que remove cravos, impurezas e células mortas, com extração e finalização calmante.',
+    forWhat:'Desobstruir os poros, renovar a pele e potencializar os produtos que você usa em casa.',
+    how:'Protocolo completo de higienização, extração e máscara, adaptado ao seu tipo de pele.'},
+  'limpeza-dermaplaning':{icon:'scan', name:'Limpeza de pele + dermaplaning',
+    blurb:'Limpeza profunda com o toque extra do dermaplaning.',
+    what:'Limpeza de pele completa somada ao dermaplaning, que remove os pelinhos e a camada de células mortas com uma lâmina delicada.',
+    forWhat:'Renovar a pele, dar mais luminosidade e deixar maquiagem e produtos deslizarem melhor.',
+    how:'A limpeza profunda é finalizada com o dermaplaning, tudo em uma única sessão.'},
+  'pdrn-microagulhamento':{icon:'sun', name:'PDRN + microagulhamento',
+    blurb:'Regeneração profunda para uma pele mais firme e viçosa.',
+    what:'O microagulhamento cria microcanais na pele que potencializam a absorção do PDRN, um ativo regenerador que estimula colágeno e reparação.',
+    forWhat:'Melhorar firmeza, textura, marcas e luminosidade da pele.',
+    how:'O ativo regenerador é aplicado logo após o microagulhamento, quando a pele está mais receptiva.'},
+  'remocao-lesoes':{icon:'scan', name:'Remoção de lesões de pele',
+    blurb:'Pele mais limpa e uniforme, com avaliação cuidadosa.',
+    what:'Remoção de pequenas lesões de pele como verrugas, seringomas, acrocordons (os pequenos “plicos”), sinais e xantelasma.',
+    forWhat:'Uniformizar a pele e remover pequenas lesões com segurança.',
+    how:'Cada lesão é avaliada individualmente para definir a melhor técnica antes de qualquer procedimento.'},
+  'clareamento':{icon:'sun', name:'Clareamento de áreas',
+    blurb:'Tom uniforme nas áreas que costumam escurecer.',
+    what:'Protocolo em série que clareia áreas específicas do corpo, como axilas, virilha e outras regiões que tendem a escurecer.',
+    forWhat:'Uniformizar o tom da pele e devolver a confiança em regiões pontuais.',
+    how:'São 8 sessões, com cuidados orientados entre elas para manter o resultado.'},
+
+  'preench-labial':{icon:'lips', name:'Preenchimento labial',
+    blurb:'Volume e contorno com naturalidade. Cada lábio é único.',
+    what:'Preenchimento com ácido hialurônico que dá volume, hidrata e desenha o contorno dos lábios, respeitando a sua proporção.',
+    forWhat:'Realçar os lábios, corrigir pequenas assimetrias e suavizar o contorno, sem perder a naturalidade.',
+    how:'A quantidade e a técnica são definidas junto com você, para um resultado que combina com o seu rosto.'},
+  'preench-olheiras':{icon:'eye', name:'Preenchimento de olheiras',
+    blurb:'Um olhar descansado, sem aquele aspecto de cansaço.',
+    what:'Preenchimento com ácido hialurônico na região das olheiras, que suaviza o sulco e a sombra embaixo dos olhos.',
+    forWhat:'Reduzir o aspecto de cansaço e devolver frescor e leveza ao olhar.',
+    how:'Aplicação delicada e pontual, com técnica específica para uma área tão sensível.'},
+  'preench-mento':{icon:'face', name:'Preenchimento de mento (queixo)',
+    blurb:'Equilíbrio e proporção para o queixo e o perfil.',
+    what:'Preenchimento do mento (queixo) com ácido hialurônico, que projeta e harmoniza o queixo com o restante do rosto.',
+    forWhat:'Melhorar a proporção do perfil e o equilíbrio entre queixo, lábios e nariz.',
+    how:'Definido a partir da análise do seu perfil e das suas proporções faciais.'},
+  'preench-bigode-chines':{icon:'face', name:'Preenchimento de bigode chinês',
+    blurb:'Sulcos suavizados, expressão preservada.',
+    what:'Preenchimento com ácido hialurônico dos sulcos do bigode chinês, as linhas que descem do nariz até os cantos da boca.',
+    forWhat:'Suavizar essas linhas e devolver leveza ao terço inferior do rosto.',
+    how:'A quantidade de produto é avaliada individualmente, porque cada rosto tem uma profundidade de sulco.'},
+  'preench-mandibula':{icon:'face', name:'Preenchimento de mandíbula',
+    blurb:'Um contorno de rosto mais definido e marcante.',
+    what:'Preenchimento da linha da mandíbula com ácido hialurônico, que marca e define o contorno do rosto.',
+    forWhat:'Definir a mandíbula, dar estrutura ao rosto e suavizar a flacidez do contorno.',
+    how:'Avaliação individual para definir a quantidade e os pontos de aplicação mais adequados.'},
+  'preench-malar':{icon:'face', name:'Preenchimento de malar e zigomático',
+    blurb:'As maçãs do rosto em equilíbrio, com sustentação natural.',
+    what:'Preenchimento da região malar e do zigomático (as maçãs do rosto) com ácido hialurônico.',
+    forWhat:'Dar suporte, projeção e proporção ao terço médio do rosto, o que suaviza toda a face.',
+    how:'Avaliação individual para respeitar a anatomia e as proporções do seu rosto.'},
+  'preench-gluteo-ah':{icon:'heart', name:'Preenchimento de glúteo com ácido hialurônico',
+    blurb:'Contorno e volume dos glúteos, sem cirurgia.',
+    what:'Preenchimento dos glúteos com 100ml de ácido hialurônico, que melhora o volume, a projeção e o contorno da região.',
+    forWhat:'Melhorar o formato e a projeção dos glúteos de forma não cirúrgica.',
+    how:'Procedimento em consultório, com o protocolo e a quantidade definidos na avaliação.'},
+  'rinomodelacao':{icon:'face', name:'Rinomodelação',
+    blurb:'Um nariz mais harmônico em poucos minutos, sem cirurgia.',
+    what:'Correção de pequenas imperfeições do nariz com ácido hialurônico, como projetar a ponta ou disfarçar uma leve saliência.',
+    forWhat:'Harmonizar o formato do nariz e equilibrar o perfil, sem procedimento cirúrgico.',
+    how:'Aplicação pontual e precisa; o resultado já aparece na hora.'},
+  'botox':{icon:'sparkle', name:'Botox',
+    blurb:'Suavidade e naturalidade para as suas expressões.',
+    what:'Aplicação de toxina botulínica que relaxa temporariamente os músculos responsáveis pelas rugas de expressão, na testa, entre as sobrancelhas e ao redor dos olhos.',
+    forWhat:'Suavizar linhas de expressão e prevenir o aprofundamento das rugas, mantendo a naturalidade.',
+    how:'Aplicação rápida e pontual; o efeito se desenvolve ao longo de alguns dias.'},
+
+  'bio-facial':{icon:'hex', name:'Bioestimulador de colágeno facial',
+    blurb:'Firmeza que nasce do seu próprio colágeno.',
+    what:'Bioestimulador injetável que estimula a pele a produzir colágeno novo, tratando a flacidez de dentro para fora.',
+    forWhat:'Devolver firmeza, sustentação e qualidade à pele do rosto, com resultado natural e progressivo.',
+    how:'O resultado é construído pelo seu organismo ao longo das semanas, de forma gradual.'},
+  'bio-corporal':{icon:'hex', name:'Bioestimulador de colágeno corporal',
+    blurb:'Firmeza para as áreas do corpo que perdem sustentação.',
+    what:'Bioestimulador de colágeno aplicado em regiões que costumam flacidar, como a parte interna dos braços, o abdômen e o interior das coxas.',
+    forWhat:'Melhorar a firmeza e a qualidade da pele do corpo, suavizando a flacidez.',
+    how:'As áreas são definidas na avaliação; o estímulo de colágeno acontece de forma gradual.'},
+  'bio-gluteo':{icon:'hex', name:'Bioestimulador de colágeno para glúteo',
+    blurb:'Firmeza e sustentação para os glúteos.',
+    what:'Bioestimulador de colágeno voltado à firmeza e à qualidade da pele dos glúteos, que ajuda na sustentação da região.',
+    forWhat:'Melhorar a textura, a firmeza e o aspecto geral da pele dos glúteos.',
+    how:'Protocolo de 1 ou 2 frascos, definido conforme o seu objetivo e a avaliação.'},
+
+  'gluteo-max':{icon:'flame', name:'Glúteo Max',
+    blurb:'Tônus e firmeza com estímulo muscular.',
+    what:'Protocolo que trabalha o tônus e a firmeza dos glúteos por meio de estímulo muscular direcionado.',
+    forWhat:'Fortalecer, tonificar e melhorar o contorno dos glúteos.',
+    how:'Pode ser feito em sessão única ou em protocolo de 5 sessões, que traz resultados mais consistentes.'},
+  'taping-pos-parto':{icon:'heart', name:'Taping pós-parto',
+    blurb:'Suporte e conforto no pós-parto, no aconchego de casa.',
+    what:'Aplicação de bandagens elásticas (taping) na região abdominal no pós-parto, feita em atendimento domiciliar.',
+    forWhat:'Dar suporte à musculatura e conforto à região no período pós-parto.',
+    how:'Atendimento na sua casa, com aplicação cuidadosa e orientação.'},
+
+  'tizepartida-1':{icon:'star', name:'Protocolo Tizepartida (Morjaro) 1',
+    blurb:'Uma jornada completa de emagrecimento, acompanhada do início ao fim.',
+    what:'Protocolo que une avaliação, orientação nutricional, a medicação em doses acompanhadas e cuidados corporais, tudo em um plano estruturado.'},
+  'tizepartida-2':{icon:'star', name:'Protocolo Tizepartida (Morjaro) 2',
+    blurb:'A jornada de emagrecimento com estímulo corporal reforçado.',
+    what:'Protocolo completo com avaliação, orientação nutricional, a medicação em doses acompanhadas e sessões de enzima localizada para potencializar a redução de medidas.'}
+};
+Object.keys(COPY).forEach(id=>{ IMG.procedure[id] = IMG_BASE+'procedimentos/'+id+'.jpg'; });
+
+/* ============================================================
+   4. DADOS POR CIDADE — preços 100% isolados (INALTERADOS)
+   ============================================================ */
+const CITIES = {
+  'abaetetuba':{
+    items:{
+      'protocolos-corporais':[
+        {id:'enzima-localizada', priceOptions:[{lbl:'1 aplicação',v:140},{lbl:'3 sessões',v:400}]},
+        {id:'enzima-perda-peso', priceOptions:[{lbl:'1 aplicação',v:140},{lbl:'3 sessões',v:400}]},
+        {id:'estrias', eval:true},
+        {id:'peim', price:150},
+        {id:'melasma', priceOptions:[{lbl:'8 sessões',v:800}]},
+        {id:'lipo-papada', price:150},
+        {id:'terapia-capilar', priceOptions:[{lbl:'6 sessões',v:550}]},
+        {id:'body-piercing', priceNote:'R$ 50 a R$ 120'}
+      ],
+      'tratamentos-faciais':[
+        {id:'skin-booster', priceOptions:[{lbl:'1 sessão',v:120},{lbl:'3 sessões',v:300}]},
+        {id:'limpeza-pele', price:120},
+        {id:'limpeza-dermaplaning', price:150},
+        {id:'pdrn-microagulhamento', price:300},
+        {id:'remocao-lesoes', eval:true},
+        {id:'clareamento', priceOptions:[{lbl:'8 sessões',v:800}]}
+      ],
+      'harmonizacao-facial':[
+        {id:'preench-labial', price:600},
+        {id:'preench-olheiras', price:600},
+        {id:'preench-mento', price:600},
+        {id:'preench-bigode-chines', eval:true, priceNote:'R$ 1.100 / 2ML'},
+        {id:'preench-mandibula', eval:true},
+        {id:'preench-malar', eval:true},
+        {id:'preench-gluteo-ah', price:3900},
+        {id:'rinomodelacao', price:800},
+        {id:'botox', price:800}
+      ],
+      'bioestimulacao-rejuvenescimento':[
+        {id:'bio-facial', price:1500},
+        {id:'bio-corporal', price:1500},
+        {id:'bio-gluteo', priceOptions:[{lbl:'1 frasco',v:1500},{lbl:'2 frascos',v:2500}]}
+      ],
+      'gluteos':[
+        {id:'gluteo-max', name:'Glúteo Max + corrente russa', priceOptions:[{lbl:'1 sessão',v:250},{lbl:'5 sessões',v:1000}]},
+        {id:'taping-pos-parto', price:150, priceNote:'aplicação domiciliar'}
+      ],
+      'protocolos-especiais':[
+        {id:'tizepartida-1', special:true, price:1000, includes:['Avaliação completa','Instrução nutricional','5 doses de 2,5 mg','4 sessões de mantas detox','1 massagem modeladora']},
+        {id:'tizepartida-2', special:true, price:1450, includes:['Avaliação completa','Instrução nutricional','5 doses de 2,5 mg','3 sessões de enzima localizada','1 massagem modeladora']}
+      ]
+    }
+  },
+  'igarape-miri':{
+    items:{
+      'protocolos-corporais':[
+        {id:'enzima-localizada', priceOptions:[{lbl:'1 aplicação',v:140},{lbl:'3 sessões',v:400}]},
+        {id:'enzima-perda-peso', priceOptions:[{lbl:'1 aplicação',v:140},{lbl:'3 sessões',v:400}]},
+        {id:'estrias', eval:true},
+        {id:'peim', price:200},
+        {id:'melasma', priceOptions:[{lbl:'8 sessões',v:900}]},
+        {id:'lipo-papada', price:200},
+        {id:'terapia-capilar', priceOptions:[{lbl:'6 sessões',v:600}]}
+      ],
+      'tratamentos-faciais':[
+        {id:'skin-booster', priceOptions:[{lbl:'1 sessão',v:150},{lbl:'3 sessões',v:430}]},
+        {id:'limpeza-pele', name:'Limpeza de pele premium', price:160},
+        {id:'limpeza-dermaplaning', price:200},
+        {id:'pdrn-microagulhamento', price:300},
+        {id:'remocao-lesoes', eval:true},
+        {id:'clareamento', priceOptions:[{lbl:'8 sessões',v:900}]}
+      ],
+      'harmonizacao-facial':[
+        {id:'preench-labial', price:700},
+        {id:'preench-olheiras', price:700},
+        {id:'preench-mento', price:700},
+        {id:'preench-bigode-chines', eval:true, priceNote:'R$ 1.200 / 2ML'},
+        {id:'preench-mandibula', eval:true},
+        {id:'preench-malar', eval:true},
+        {id:'preench-gluteo-ah', price:3900},
+        {id:'rinomodelacao', price:800},
+        {id:'botox', price:900}
+      ],
+      'bioestimulacao-rejuvenescimento':[
+        {id:'bio-facial', price:1500},
+        {id:'bio-corporal', price:1500},
+        {id:'bio-gluteo', priceOptions:[{lbl:'1 frasco',v:1500},{lbl:'2 frascos',v:2500}]}
+      ],
+      'gluteos':[
+        {id:'gluteo-max', priceOptions:[{lbl:'1 sessão',v:250},{lbl:'5 sessões',v:1000}]}
+      ],
+      'protocolos-especiais':[
+        {id:'tizepartida-1', special:true, price:1000, includes:['Avaliação completa','Instrução nutricional','5 doses de 2,5 mg','1 massagem modeladora']},
+        {id:'tizepartida-2', special:true, price:1450, includes:['Avaliação completa','Instrução nutricional','5 doses de 2,5 mg','3 sessões de enzima localizada','1 massagem modeladora']}
+      ]
+    }
+  }
+};
+
+/* ============================================================
+   5. ESTADO + HELPERS
+   ============================================================ */
+const state = { city: localStorage.getItem('lr_city') || null };
+const scrollMem = {};
+function setCity(c){ state.city=c; localStorage.setItem('lr_city',c); }
+function esc(s){ return String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
+function procName(entry){ return entry.name || COPY[entry.id].name; }
+function catBySlug(slug){ return CATEGORIES.find(c=>c.slug===slug); }
+function cityItems(slug){ return (CITIES[state.city]?.items[slug])||[]; }
+function findEntry(slug,id){ return cityItems(slug).find(e=>e.id===id); }
+
+/* --- preço: R$ e valor como um único grupo tipográfico --- */
+function money(reais){ return `<span class="money"><span class="cur">R$</span><span class="val">${reais.toLocaleString('pt-BR')}</span></span>`; }
+function moneyPlain(str){ return `<span class="money-plain">${esc(str)}</span>`; }
+
+function cardPrice(e){
+  if(e.eval && !e.priceNote) return `<span class="price-eval">Sob avaliação</span>`;
+  if(e.price!=null) return `<div class="price-tag">${money(e.price)}</div>`;
+  if(e.priceOptions){ const min=Math.min(...e.priceOptions.map(o=>o.v));
+    return `<div class="price-tag"><span class="from">a partir de</span>${money(min)}</div>`; }
+  if(e.priceNote) return `<div class="price-tag">${moneyPlain(e.priceNote)}</div>`;
+  return `<span class="price-eval">Sob avaliação</span>`;
+}
+
+/* --- imagem: <img> real por cima do gradiente; some se não existir --- */
+function imgFor(kind,key){
+  if(kind==='hero') return IMG.hero;
+  if(kind==='city') return IMG.city[key];
+  if(kind==='category') return IMG.category[key];
+  if(kind==='procedure') return IMG.procedure[key];
+  return null;
+}
+function mediaHTML(gradKey, iconKey, kind, key, alt, opts){
+  opts = opts||{};
+  const src = imgFor(kind,key);
+  const pos = (kind==='procedure' && IMG_POS[key]) ? ` style="object-position:${IMG_POS[key]}"` : '';
+  return `<div class="media grad-${gradKey}">`
+    + (iconKey?`<span class="media-ic">${ICON[iconKey]}</span>`:'')
+    + (src?`<img class="media-img" src="${esc(src)}" alt="${esc(alt||'')}" loading="${opts.eager?'eager':'lazy'}"${pos} onerror="this.remove()">`:'')
+    + (opts.scrim?`<span class="media-scrim"></span>`:'')
+    + (opts.overlay||'')
+    + `</div>`;
+}
+
+function waHref(procNameStr){
+  const num = WA[state.city] || WA_DEFAULT;
+  const cityName = CITY_LABEL[state.city];
+  let msg;
+  if(procNameStr && cityName) msg = `Olá! Gostaria de saber mais sobre o procedimento ${procNameStr} em ${cityName}.`;
+  else if(cityName) msg = `Olá! Gostaria de conhecer mais sobre os serviços da clínica em ${cityName}.`;
+  else msg = `Olá! Gostaria de conhecer mais sobre os serviços da clínica Leticia Ribeiro.`;
+  return `https://wa.me/${num}?text=${encodeURIComponent(msg)}`;
+}
+
+/* ============================================================
+   6. RENDER + ROTEAMENTO (inalterado)
+   ============================================================ */
+const app = document.getElementById('app');
+const fab = document.getElementById('fab');
+
+function render(){
+  const hash = location.hash.replace(/^#/,'');
+  const parts = hash.split('/');
+  const route = parts[0] || 'hero';
+  const needCity = ['inicio','categorias','cat','proc'].includes(route);
+  if(needCity && !state.city){ sessionStorage.setItem('lr_return', hash); location.hash='cidade'; return; }
+
+  let html='';
+  if(route==='hero'||route===''){ html=viewHero(); }
+  else if(route==='cidade'){ html=viewCity(); }
+  else if(route==='inicio'){ html=viewHome(); }
+  else if(route==='categorias'){ html=viewCategories(); }
+  else if(route==='cat'){ html=viewCategory(parts[1]); }
+  else if(route==='proc'){ html=viewProcedure(parts[1],parts[2]); }
+  else if(route==='faq'){ html=viewFaq(); }
+  else { html=viewHero(); }
+
+  app.innerHTML = html;
+  app.classList.remove('page-in'); void app.offsetWidth; app.classList.add('page-in');
+  updateFab(route,parts);
+  initReveal();
+
+  if(route==='cat' && scrollMem[parts[1]]!=null){ window.scrollTo(0,scrollMem[parts[1]]); scrollMem[parts[1]]=null; }
+  else { window.scrollTo(0,0); }
+}
+
+/* ---- HERO / CAPA (imagem única finalizada; toque em qualquer lugar -> cidades) ---- */
+function viewHero(){
+  return `
+  <a class="hero" href="#cidade" aria-label="Tabela de valores — toque para escolher a sua cidade">
+    ${mediaHTML('hero', null, 'hero', null, 'Leticia Ribeiro — Tabela de Valores', {eager:true})}
+  </a>`;
+}
+
+/* ---- CIDADE ---- */
+function viewCity(){
+  const card = (slug,eyebrow,name,desc)=>`
+    <button class="city-card" data-city="${slug}">
+      ${mediaHTML('city-'+slug, null, 'city', slug, name, {scrim:true})}
+      <span class="cc-go">${ICON.arrowR}</span>
+      <div class="cc-body">
+        <span class="cc-eyebrow">${esc(eyebrow)}</span>
+        <h3>${esc(name)}</h3>
+        <p>${esc(desc)}</p>
+      </div>
+    </button>`;
+  return `
+  <section class="city-screen">
+    <div class="head">
+      <span class="eyebrow">Leticia Ribeiro</span>
+      <h2>Onde você deseja ser atendida?</h2>
+      <p class="lede">Escolha sua cidade para ver os procedimentos e valores.</p>
+    </div>
+    <div class="city-cards">
+      ${card('abaetetuba','Pará · Brasil','Abaetetuba','Atendimento completo, do rosto ao corpo, pertinho de você.')}
+      ${card('igarape-miri','Pará · Brasil','Igarapé-Miri','A mesma dedicação e sofisticação, na sua cidade.')}
+    </div>
+  </section>`;
+}
+
+/* ---- HOME ---- */
+function viewHome(){
+  const cityName = CITY_LABEL[state.city];
+  const total = Object.values(CITIES[state.city].items).reduce((a,arr)=>a+arr.length,0);
+  return `
+  ${topbar('Início', false)}
+  <section class="home-hero">
+    <p class="welcome reveal in">Bem-vinda à sua experiência de cuidado.</p>
+    <h2 class="reveal in">Leticia<br>Ribeiro</h2>
+    <div class="loc reveal in">${ICON.pin} ${esc(cityName)}</div>
+    <p class="continua reveal in">Cada protocolo é pensado a partir de uma avaliação individual — para o que realmente faz sentido para você.</p>
+  </section>
+  <div class="home-mini">
+    <div class="mini reveal"><div class="n">6</div><div class="l">categorias de cuidado</div></div>
+    <div class="mini reveal"><div class="n">${total}</div><div class="l">procedimentos disponíveis</div></div>
+  </div>
+  <div class="home-cta">
+    <div class="btn-row">
+      <a class="btn btn-primary reveal" href="#categorias">Ver procedimentos ${ICON.arrowR}</a>
+      <a class="btn btn-ghost reveal" href="${waHref('')}" target="_blank" rel="noopener"><span class="wa-ico">${ICON.wa}</span> Falar pelo WhatsApp</a>
+    </div>
+  </div>
+  ${footer()}`;
+}
+
+/* ---- CATEGORIAS ---- */
+function viewCategories(){
+  const cards = CATEGORIES.map((c,i)=>`
+    <a class="cat-card reveal" style="transition-delay:${i*55}ms" href="#cat/${c.slug}">
+      ${mediaHTML(c.slug, c.icon, 'category', c.slug, c.name, {scrim:true, overlay:`<span class="cat-index">${String(i+1).padStart(2,'0')}</span>`})}
+      <div class="cat-body">
+        <h3>${esc(c.name)}</h3>
+        <p>${esc(c.tagline)}</p>
+        <span class="go">Ver procedimentos ${ICON.arrowR}</span>
+      </div>
+    </a>`).join('');
+  return `
+  ${topbar('Categorias', true, '#inicio')}
+  <div class="screen-head reveal in">
+    <span class="eyebrow">${esc(CITY_LABEL[state.city])}</span>
+    <h2>Categorias de cuidado</h2>
+    <p class="lede">Escolha por onde deseja começar.</p>
+  </div>
+  <div class="cat-list">${cards}</div>
+  ${footer()}`;
+}
+
+/* ---- CATEGORIA ---- */
+function viewCategory(slug){
+  const cat = catBySlug(slug);
+  if(!cat){ location.hash='categorias'; return ''; }
+  const num = String(CATEGORIES.indexOf(cat)+1).padStart(2,'0');
+  const items = cityItems(slug);
+  const cards = items.map((e,i)=>{
+    const c = COPY[e.id];
+    const badge = e.eval ? `<span class="badge-eval"><span class="dot"></span>Avaliação</span>` : '';
+    return `
+    <a class="card reveal" style="transition-delay:${Math.min(i,6)*50}ms" href="#proc/${slug}/${e.id}">
+      ${mediaHTML(slug, c.icon, 'procedure', e.id, procName(e), {overlay:badge})}
+      <div class="card-body">
+        <h3>${esc(procName(e))}</h3>
+        <p>${esc(c.blurb)}</p>
+        <div class="card-foot">${cardPrice(e)}<span class="arrow">${ICON.arrowR}</span></div>
+      </div>
+    </a>`;
+  }).join('');
+  return `
+  ${topbar(cat.name, true, '#categorias')}
+  <div class="cat-hero reveal in">
+    <div class="num">${num}</div>
+    <div class="num-line"></div>
+    <span class="eyebrow">${esc(CITY_LABEL[state.city])}</span>
+    <h2>${esc(cat.name)}</h2>
+    <p class="lede">${esc(cat.tagline)}</p>
+  </div>
+  <div class="proc-list">${cards}</div>
+  ${footer()}`;
+}
+
+/* ---- DETALHE ---- */
+function viewProcedure(slug,id){
+  const cat = catBySlug(slug);
+  const e = findEntry(slug,id);
+  const c = COPY[id];
+  if(!cat||!e||!c){ location.hash = slug?('cat/'+slug):'categorias'; return ''; }
+  const name = procName(e);
+
+  let blocksHtml;
+  if(e.special){
+    blocksHtml = `
+      <div class="block"><h4>Sobre a jornada</h4><p>${esc(c.what)}</p></div>
+      <div class="block"><h4>O que está incluído</h4>
+        <ul class="included">${e.includes.map(it=>`<li><span class="ck">${ICON.check}</span><span>${esc(it)}</span></li>`).join('')}</ul>
+      </div>`;
+  } else {
+    blocksHtml = `
+      <div class="block"><h4>Sobre o procedimento</h4><p>${esc(c.what)}</p></div>
+      <div class="block"><h4>Para que serve</h4><p>${esc(c.forWhat)}</p></div>
+      ${c.how?`<div class="block"><h4>Como funciona</h4><p>${esc(c.how)}</p></div>`:''}
+      ${e.eval?`<div class="block"><h4>Avaliação</h4><p>Cada indicação é avaliada individualmente para definir o protocolo mais adequado para você.</p></div>`:''}`;
+  }
+
+  let investHtml;
+  if(e.priceOptions){
+    investHtml = `<div class="price-options">${e.priceOptions.map(o=>`
+      <div class="price-opt"><span class="lbl">${esc(o.lbl)}</span>${money(o.v)}</div>`).join('')}</div>`;
+    if(e.priceNote) investHtml += `<p class="invest-sub">${esc(e.priceNote)}</p>`;
+  } else if(e.price!=null){
+    investHtml = `<div class="invest-price">${money(e.price)}</div>`;
+    if(e.priceNote) investHtml += `<p class="invest-sub">${esc(e.priceNote)}</p>`;
+  } else if(e.eval && e.priceNote){
+    investHtml = `<div class="invest-price">${moneyPlain(e.priceNote)}</div><p class="invest-sub">Valor final definido após a sua avaliação.</p>`;
+  } else {
+    investHtml = `<div class="invest-eval">Sob avaliação</div><p class="invest-sub">O valor é definido individualmente, após a sua avaliação.</p>`;
+  }
+
+  const ctaLabel = e.eval ? 'Solicitar avaliação' : 'Agendar procedimento';
+
+  return `
+  ${topbar(cat.name, true, '#cat/'+slug)}
+  <div class="detail-top">
+    <h2 class="reveal in">${esc(name)}</h2>
+    <p class="detail-impact reveal in">${esc(c.blurb)}</p>
+    ${e.eval?`<div class="detail-eval reveal in"><span class="dot"></span>Avaliação necessária</div>`:''}
+  </div>
+  <div class="detail-photo reveal in">${mediaHTML(slug, c.icon, 'procedure', id, name, {eager:true})}</div>
+  <div class="blocks reveal in">${blocksHtml}</div>
+  <div class="invest reveal in">
+    <span class="eyebrow">Investimento</span>
+    ${investHtml}
+  </div>
+  <div class="detail-cta">
+    <a class="btn btn-primary reveal in" href="${waHref(name)}" target="_blank" rel="noopener"><span class="wa-ico">${ICON.wa}</span> ${ctaLabel}</a>
+  </div>
+  <a class="back-link" href="#cat/${slug}">${ICON.arrowL} Voltar para procedimentos</a>
+  ${footer()}`;
+}
+
+/* ---- FAQ ---- */
+function viewFaq(){
+  const qa = [
+    ['Como funciona o atendimento?','Cada protocolo começa com uma avaliação individual, para entender a sua pele e o seu objetivo antes de indicar qualquer procedimento.'],
+    ['Os valores são os mesmos nas duas cidades?','Nem sempre. Abaetetuba e Igarapé-Miri têm tabelas próprias. Escolha a sua cidade para ver apenas os valores dela.'],
+    ['O que significa “Avaliação necessária”?','Alguns procedimentos têm o valor definido após uma avaliação, porque dependem da sua indicação individual.'],
+    ['Como faço para agendar?','É só falar com a clínica pelo WhatsApp. Ao abrir um procedimento, a mensagem já vai com o nome dele e a sua cidade.'],
+    ['Preciso escolher a cidade toda vez?','Não. A sua cidade fica salva no aparelho. Você pode trocar quando quiser em “Trocar cidade”, no rodapé.'],
+    ['Os preços incluem quantas sessões?','Quando o procedimento tem opções — 1 sessão, 3 sessões — cada uma aparece com o próprio valor na página do procedimento.']
+  ];
+  const items = qa.map(([q,a])=>`
+    <details class="faq-item reveal">
+      <summary>${esc(q)}<span class="plus">${ICON.plus}</span></summary>
+      <div class="faq-a">${esc(a)}</div>
+    </details>`).join('');
+  return `
+  ${topbar('FAQ', true, state.city?'#inicio':'#hero')}
+  <div class="screen-head reveal in">
+    <span class="eyebrow">Perguntas frequentes</span>
+    <h2>Tudo o que você precisa saber</h2>
+    <p class="lede">Respostas rápidas para você navegar com tranquilidade.</p>
+  </div>
+  <div class="faq-list">${items}</div>
+  ${footer()}`;
+}
+
+/* ---- topbar / footer ---- */
+function topbar(title, showBack, backHref){
+  return `
+  <div class="topbar">
+    ${showBack?`<a class="back" href="${backHref}" aria-label="Voltar">${ICON.arrowL}</a>`:''}
+    <span class="topbar-title">${esc(title)}</span>
+    ${state.city?`<span class="city-chip">${esc(CITY_LABEL[state.city])}</span>`:''}
+  </div>`;
+}
+function footer(){
+  const cityName = CITY_LABEL[state.city];
+  return `
+  <footer class="foot">
+    <div class="reveal">
+      <div class="fmono">Leticia Ribeiro</div>
+      <div class="ftype">Clínica de Estética</div>
+      ${cityName?`<div class="city-line">${ICON.pin} ${esc(cityName)}</div>`:''}
+      <p class="fquote">Seu cuidado merece um momento só seu.</p>
+      <div class="flinks">
+        <a class="btn btn-light" href="${waHref('')}" target="_blank" rel="noopener"><span class="wa-ico" style="color:#1FA855">${ICON.wa}</span> Agendar meu atendimento</a>
+        <a class="btn btn-ghost" href="${esc(INSTAGRAM)}" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-ghost" href="#faq">Perguntas frequentes</a>
+        <a class="btn btn-ghost" href="#cidade" data-switch>Trocar cidade</a>
+      </div>
+      <p class="fmeta">© Leticia Ribeiro — Clínica de Estética.<br>Feito com cuidado para você.</p>
+    </div>
+  </footer>`;
+}
+
+/* ---- FAB ---- */
+function updateFab(route,parts){
+  if(route==='hero'||route===''||route==='cidade'){ fab.classList.add('hide'); return; }
+  fab.classList.remove('hide');
+  let procNameStr='';
+  if(route==='proc'){ const e=findEntry(parts[1],parts[2]); if(e) procNameStr=procName(e); }
+  fab.href = waHref(procNameStr);
+}
+
+/* ---- REVEAL ---- */
+let io;
+function initReveal(){
+  if(io) io.disconnect();
+  const els = app.querySelectorAll('.reveal:not(.in)');
+  if(!('IntersectionObserver' in window)){ els.forEach(e=>e.classList.add('in')); return; }
+  io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(e=>io.observe(e));
+}
+
+/* ---- EVENTOS ---- */
+document.addEventListener('click',(ev)=>{
+  // menu da capa: pular direto pra cidade escolhida
+  const navCity = ev.target.closest('[data-nav-city]');
+  if(navCity){
+    ev.preventDefault();
+    setCity(navCity.getAttribute('data-nav-city'));
+    if(location.hash==='#inicio'){ render(); } else { location.hash='inicio'; }
+    return;
+  }
+  const cityBtn = ev.target.closest('[data-city]');
+  if(cityBtn){
+    ev.preventDefault();
+    setCity(cityBtn.getAttribute('data-city'));
+    const ret = sessionStorage.getItem('lr_return');
+    sessionStorage.removeItem('lr_return');
+    const target = ret || 'inicio';
+    if(('#'+target)===location.hash){ render(); } else { location.hash = target; }
+    return;
+  }
+  const sw = ev.target.closest('[data-switch]');
+  if(sw){ const cur=location.hash.replace(/^#/,''); if(cur && cur!=='cidade') sessionStorage.setItem('lr_return', cur); }
+  const card = ev.target.closest('a.card');
+  if(card){ const m=location.hash.match(/^#cat\/([^/]+)/); if(m) scrollMem[m[1]]=window.scrollY; }
+});
+
+window.addEventListener('hashchange', render);
+window.addEventListener('DOMContentLoaded', render);
+render();
+</script>
+</body>
+</html>
